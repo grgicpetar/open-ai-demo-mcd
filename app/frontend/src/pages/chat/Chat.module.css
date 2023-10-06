@@ -32,11 +32,11 @@
     font-size: 4rem;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .chatEmptyStateSubtitle {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 10px;
 }
 

@@ -12,6 +12,7 @@ import { SettingsButton } from "../../components/SettingsButton/SettingsButton";
 import { useLogin, getToken } from "../../authConfig";
 import { useMsal } from "@azure/msal-react";
 import { TokenClaimsDisplay } from "../../components/TokenClaimsDisplay";
+import { DatabaseSearchFilled } from "@fluentui/react-icons";
 
 export function Component(): JSX.Element {
     const [isConfigPanelOpen, setIsConfigPanelOpen] = useState(false);
@@ -36,7 +37,7 @@ export function Component(): JSX.Element {
     const [activeCitation, setActiveCitation] = useState<string>();
     const [activeAnalysisPanelTab, setActiveAnalysisPanelTab] = useState<AnalysisPanelTabs | undefined>(undefined);
 
-    const client = useLogin ? useMsal().instance : undefined
+    const client = useLogin ? useMsal().instance : undefined;
 
     const makeApiRequest = async (question: string) => {
         lastQuestionRef.current = question;
@@ -46,7 +47,7 @@ export function Component(): JSX.Element {
         setActiveCitation(undefined);
         setActiveAnalysisPanelTab(undefined);
 
-        const token = client ? await getToken(client) : undefined
+        const token = client ? await getToken(client) : undefined;
 
         try {
             const request: AskRequest = {
@@ -158,11 +159,11 @@ export function Component(): JSX.Element {
     return (
         <div className={styles.oneshotContainer}>
             <div className={styles.oneshotTopSection}>
-                <SettingsButton className={styles.settingsButton} onClick={() => setIsConfigPanelOpen(!isConfigPanelOpen)} />
+                <DatabaseSearchFilled fontSize={"120px"} primaryFill={"#ffc72c"} aria-hidden="true" aria-label="Chat logo" />
                 <h1 className={styles.oneshotTitle}>Ask your data</h1>
                 <div className={styles.oneshotQuestionInput}>
                     <QuestionInput
-                        placeholder="Example: Does my plan cover annual eye exams?"
+                        placeholder="Example: Vilka ingredienser finns i en Big Mac?"
                         disabled={isLoading}
                         onSend={question => makeApiRequest(question)}
                     />
@@ -279,7 +280,7 @@ export function Component(): JSX.Element {
                         onChange={onUseOidSecurityFilterChange}
                     />
                 )}
-                {useLogin &&  (
+                {useLogin && (
                     <Checkbox
                         className={styles.oneshotSettingsSeparator}
                         checked={useGroupsSecurityFilter}
@@ -299,7 +300,7 @@ export function Component(): JSX.Element {
                     required
                     onChange={onRetrievalModeChange}
                 />
-                { useLogin && <TokenClaimsDisplay />}
+                {useLogin && <TokenClaimsDisplay />}
             </Panel>
         </div>
     );

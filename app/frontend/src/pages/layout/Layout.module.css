@@ -5,16 +5,19 @@
 }
 
 .header {
-    background-color: #222222;
+    background-color: #27251f;
     color: #f2f2f2;
+    height: 80px;
 }
 
 .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-right: 12px;
     margin-left: 12px;
+    height: 100%;
+    position: relative;
 }
 
 .headerTitleContainer {
@@ -27,6 +30,8 @@
 
 .headerLogo {
     height: 40px;
+    position: absolute;
+    left: 100px;
 }
 
 .headerTitle {
@@ -41,9 +46,10 @@
 }
 
 .headerNavPageLink {
-    color: #f2f2f2;
+    color: #ffc72c;
     text-decoration: none;
     opacity: 0.75;
+    font-size: 20px;
 
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     transition-duration: 500ms;
@@ -55,8 +61,11 @@
 }
 
 .headerNavPageLinkActive {
-    color: #f2f2f2;
-    text-decoration: none;
+    color: #ffc72c;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    font-size: 20px;
 }
 
 .headerNavLeftMargin {
