@@ -29,7 +29,7 @@ export const Answer = ({
     onFollowupQuestionClicked,
     showFollowupQuestions
 }: Props) => {
-    const parsedAnswer = useMemo(() => parseAnswerToHtml(answer.answer, isStreaming, onCitationClicked ), [answer]);
+    const parsedAnswer = useMemo(() => parseAnswerToHtml(answer.answer, isStreaming, onCitationClicked), [answer]);
 
     const sanitizedAnswerHtml = DOMPurify.sanitize(parsedAnswer.answerHtml);
 
