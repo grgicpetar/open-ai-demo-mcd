@@ -4,7 +4,7 @@ quart-cors
 langchain
 openai[datalib]
 tiktoken
-azure-search-documents==11.4.0b6
+azure-search-documents==11.4.0
 azure-storage-blob
 uvicorn[standard]
 aiohttp
