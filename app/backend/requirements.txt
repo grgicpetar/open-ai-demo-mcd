@@ -125,13 +125,19 @@ jinja2==3.1.2
     #   flask
     #   quart
 jsonpatch==1.33
-    # via langchain
+    # via
+    #   langchain
+    #   langchain-core
 jsonpointer==2.4
     # via jsonpatch
-langchain==0.0.306
+langchain==0.0.345
     # via -r requirements.in
-langsmith==0.0.41
+langchain-core==0.0.9
     # via langchain
+langsmith==0.0.69
+    # via
+    #   langchain
+    #   langchain-core
 markupsafe==2.1.3
     # via
     #   jinja2
@@ -156,12 +162,9 @@ multidict==6.0.4
     #   yarl
 mypy-extensions==1.0.0
     # via typing-inspect
-numexpr==2.8.7
-    # via langchain
 numpy==1.26.0
     # via
     #   langchain
-    #   numexpr
     #   openai
     #   pandas
     #   pandas-stubs
@@ -276,11 +279,14 @@ pycparser==2.21
 pydantic==2.4.2
     # via
     #   langchain
+    #   langchain-core
     #   langsmith
 pydantic-core==2.10.1
     # via pydantic
 pyjwt[crypto]==2.8.0
-    # via msal
+    # via
+    #   msal
+    #   pyjwt
 python-dateutil==2.8.2
     # via pandas
 python-dotenv==1.0.0
@@ -321,7 +327,9 @@ sniffio==1.3.0
 sqlalchemy==2.0.21
     # via langchain
 tenacity==8.2.3
-    # via langchain
+    # via
+    #   langchain
+    #   langchain-core
 tiktoken==0.5.1
     # via -r requirements.in
 tqdm==4.66.1
