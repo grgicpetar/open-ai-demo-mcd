@@ -17,7 +17,7 @@ annotated-types==0.5.0
     # via pydantic
 anyio==3.7.1
     # via
-    #   langchain
+    #   langchain-core
     #   watchfiles
 asgiref==3.7.2
     # via opentelemetry-instrumentation-asgi
@@ -125,13 +125,19 @@ jinja2==3.1.2
     #   flask
     #   quart
 jsonpatch==1.33
-    # via langchain
+    # via
+    #   langchain
+    #   langchain-core
 jsonpointer==2.4
     # via jsonpatch
-langchain==0.0.306
+langchain==0.0.348
     # via -r requirements.in
-langsmith==0.0.41
+langchain-core==0.0.12
     # via langchain
+langsmith==0.0.69
+    # via
+    #   langchain
+    #   langchain-core
 markupsafe==2.1.3
     # via
     #   jinja2
@@ -156,12 +162,9 @@ multidict==6.0.4
     #   yarl
 mypy-extensions==1.0.0
     # via typing-inspect
-numexpr==2.8.7
-    # via langchain
 numpy==1.26.0
     # via
     #   langchain
-    #   numexpr
     #   openai
     #   pandas
     #   pandas-stubs
@@ -259,8 +262,9 @@ opentelemetry-util-http==0.41b0
     #   opentelemetry-instrumentation-urllib
     #   opentelemetry-instrumentation-urllib3
     #   opentelemetry-instrumentation-wsgi
-packaging==23.1
+packaging==23.2
     # via
+    #   langchain-core
     #   marshmallow
     #   opentelemetry-instrumentation-flask
 pandas==2.1.1
@@ -276,11 +280,14 @@ pycparser==2.21
 pydantic==2.4.2
     # via
     #   langchain
+    #   langchain-core
     #   langsmith
 pydantic-core==2.10.1
     # via pydantic
 pyjwt[crypto]==2.8.0
-    # via msal
+    # via
+    #   msal
+    #   pyjwt
 python-dateutil==2.8.2
     # via pandas
 python-dotenv==1.0.0
@@ -290,6 +297,7 @@ pytz==2023.3.post1
 pyyaml==6.0.1
     # via
     #   langchain
+    #   langchain-core
     #   uvicorn
 quart==0.19.2
     # via
@@ -303,6 +311,7 @@ requests==2.31.0
     # via
     #   azure-core
     #   langchain
+    #   langchain-core
     #   langsmith
     #   msal
     #   msrest
@@ -321,7 +330,9 @@ sniffio==1.3.0
 sqlalchemy==2.0.21
     # via langchain
 tenacity==8.2.3
-    # via langchain
+    # via
+    #   langchain
+    #   langchain-core
 tiktoken==0.5.1
     # via -r requirements.in
 tqdm==4.66.1
